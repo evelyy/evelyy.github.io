@@ -6,6 +6,8 @@ $(document).ready(function(e) {
         $('div.entryWrapper').fadeOut(1000, function() {
             $('div.music-player').fadeIn(1000);
             $('div.navi').fadeIn(1000);
+            $('div.footer').fadeIn(1000);
+            $('div.header').fadeIn(1000);
         });
     })
 });

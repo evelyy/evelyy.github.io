@@ -11,138 +11,166 @@
 </head>
 <body>
     <div id="wrapper">
-        <div class="box" id="left-side">
-            <div class="vines">
-                <img class="ivy-corner top left" id="ivy-left" src="assets/images/ivy-corner.png">
-                <div class="repeating-vines left">
-
+        <div class="side-boxes flex grow centre space-between">
+            <div class="header hidden centre stretch">
+                <h2 style="color:lavenderblush">eve's site</h2>
+            </div>
+            <div class="line-break"></div>
+           
+            <div class="box" id="left-side">
+                <div class="vines">
+                    <img class="ivy-corner top left" id="ivy-left" src="assets/images/ivy-corner.png">
+                    <div class="repeating-vines left">
+    
+                    </div>
+                    <img class="ivy-corner bottom left" id="ivy-left-bottom" src="assets/images/ivy-corner.png">
                 </div>
-                <img class="ivy-corner bottom left" id="ivy-left-bottom" src="assets/images/ivy-corner.png">
-            </div>
-            <div class="navi hidden div-style">
-                <p class="navtext">navigation</p>
-                <div class="navlinkdiv">
-                    <a class="navlink" href="#" onclick="resetMiddle()">home</a>
-                    <a class="navlink" href="#music" onclick="transitionMiddle('music')">music</a>
-                    <a class="navlink" href="#resources" onclick="transitionMiddle('resources')">resources</a>
-                    <a class="navlink" href="#friends" onclick="transitionMiddle('friends')">friends</a>
-                    <a class="navlink" href="#about" onclick="transitionMiddle('about')">about</a>
+                <div class="navi hidden div-style left">
+                    <p class="navtext">navigation</p>
+                    <div class="navlinkdiv">
+                        <a class="navlink" href="#" onclick="resetMiddle()">home</a>
+                        <a class="navlink" href="#upcoming" onclick="transitionMiddle('upcoming')">upcoming</a>
+                        <a class="navlink" href="#music" onclick="transitionMiddle('music')">music</a>
+                        <a class="navlink" href="#resources" onclick="transitionMiddle('resources')">resources</a>
+                        <a class="navlink" href="#friends" onclick="transitionMiddle('friends')">friends</a>
+                        <a class="navlink" href="#about" onclick="transitionMiddle('about')">about</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="box" id="middle">
-            <div class="entryWrapper">
-                <h1 id="title">eve's website</h1>
-                <img id="evebass" class="bottom" href="#enter" src="assets/images/evebass.webp">
+            <div class="box" id="middle">
+                <div class="entryWrapper">
+                    <h1 id="title">eve's website</h1>
+                    <img id="evebass" class="bottom" href="#enter" src="assets/images/evebass.webp">
+                </div>
+                <div class="hidden middle div-style flex column centre upcoming" id="upcomingMiddle">
+                    <h2>upcoming</h2>
+                    <p>things i'm doing soon</p>
+                    <div class="flex row centre space-between" id="soloUpcoming" style="width: 100%;">
+                        <a href="assets/pdf/recital_handout.pdf" download>
+                            <div class="flex column centre" style="padding-left: 5%;">
+                                <img src="assets/images/recital_handout.jpg" style="max-width: 15vw;">
+                                download handout
+                            </div>
+                        </a>
+                        <h3>final university recital</h3>
+                        <h3 style="padding-right: 5%;">june 20th, 5:30pm</h3>
+                    </div>
+                </div>
+                <div class="hidden middle div-style flex column centre resources">
+                    <h2>resources</h2>
+                    <p>these are some things i found useful</p>
+                    <hr>
+                    <div class="flex row centre" id="resources">
+                        <a href="https://github.com/sayantanm19/js-music-player">
+                            <div class="resource-container flex column centre" id="music-player-resource">
+                                <p class="resource-info">js-music-player<br>by sayantanm19</p>
+                                <img class="res-img" src="https://github.com/sayantanm19/js-music-player/raw/master/output/html-css.png">
+                                <p>i used this player and edited it a bit for this site</p>
+                            </div>
+                        </a>
+                        <a href="https://www.w3schools.com/">
+                            <div class="resource-container flex column centre" id="w3schools-resource">
+                                <p class="resource-info">w3schools</p>
+                                <img class="res-img" src="assets/images/w3schools-logo.png">
+                                <p>duh</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="music hidden middle div-style flex column centre">
+                    <h2>music</h2>
+                    <p>more organised and with downloads</p>
+                    <div class="music-container flex row" id="eyeful">
+                        <img src="assets/images/covers/eyeful.png" style="max-width: 15vw; padding-bottom: 2%;">
+                        <h3>eyeful</h3>
+                        <h3>by me</h3>
+                        <a href="assets/audio/eyeful.mp3" download="eyeful by evelyy">download</a>
+                    </div>
+                    <div class="music-container flex row" id="breathy">
+                        <img src="assets/images/covers/cat_square.png" style="max-width: 15vw">
+                        <h3>breathy</h3>
+                        <h3>by me</h3>
+                        <a href="assets/audio/breathy.mp3" download="breathy by evelyy">download</a>
+                    </div>
+                </div>
+                <div class="friends hidden middle div-style flex column centre space-between fill-screen-height">
+                    <h2>my friends' pages</h2>
+                    <div class="flex row space-between" id="friendWrapper">
+                        <a href="https://yachiqq.neocities.org">
+                            <img src="assets/images/friends/yachiqq.gif" style="padding-right: 2.5%">
+                        </a>
+                        <a href="https://wormcore.neocities.org">
+                            <img src="assets/images/friends/worm.png" style="padding-left: 2.5%">
+                        </a>
+                    </div>
+                    <div class="flexSpacingDummy"></div>
+                    <div class="flexSpacingDummy"></div>
+                </div>
+                <div class="about hidden middle div-style flex column centre space-between fill-screen-height">
+                    <h2>about me, evelyn</h2>
+                    <p style="text-align: center;">hi, i'm evelyn, a 22 year old bassist and producer from melbourne australia
+                        <br>
+                        i usually make electronic music, but i also work in metal and pop-punk
+                        <br>
+                        i'm currently the bassist for the band elkie kershaw and the distant relatives
+                        <br>
+                        hope to see you around
+                    </p>
+                    <div class="flexSpacingDummy"></div>
+                    <div class="flexSpacingDummy"></div>
+                </div>
             </div>
-            <div class="resources hidden middle div-style flex column centre">
-                <h2>resources</h2>
-                <p>these are some things i found useful</p>
-                <hr>
-                <div class="flex row centre" id="resources">
-                    <a href="https://github.com/sayantanm19/js-music-player">
-                        <div class="resource-container flex column centre" id="music-player-resource">
-                            <p class="resource-info">js-music-player<br>by sayantanm19</p>
-                            <img class="res-img" src="https://github.com/sayantanm19/js-music-player/raw/master/output/html-css.png">
-                            <p>i used this player and edited it a bit for this site</p>
+            <div class="box right" id="right-side">
+                <div class="vines">
+                    <img class="ivy-corner top right" id="ivy-right" src="assets/images/ivy-corner.png">
+                    <div class="repeating-vines right"></div>
+                    <img class="ivy-corner bottom right" id="ivy-right-bottom" src="assets/images/ivy-corner.png">
+                </div>
+                <div class="music-player hidden div-style right">
+    
+                    <div class="details">
+                        <div class="now-playing">PLAYING x OF y</div>
+                        <div class="track-art"></div>
+                        <div class="track-name">Track Name</div>
+                        <div class="track-artist">Track Artist</div>
+                    </div>
+    
+                    <div class="buttons">
+                        <div class="prev-track" onclick="prevTrack()">
+                            <i class="fa fa-step-backward fa-2x"></i>
                         </div>
-                    </a>
-                    <a href="https://www.w3schools.com/">
-                        <div class="resource-container flex column centre" id="w3schools-resource">
-                            <p class="resource-info">w3schools</p>
-                            <img class="res-img" src="assets/images/w3schools-logo.png">
-                            <p>duh</p>
+                        <div class="playpause-track" onclick="playpauseTrack()">
+                            <i class="fa fa-play-circle fa-5x"></i>
                         </div>
-                    </a>
-                </div>
-            </div>
-            <div class="music hidden middle div-style flex column centre">
-                <h2>music</h2>
-                <p>more organised and with downloads</p>
-                <div class="music-container flex row" id="eyeful">
-                    <img src="assets/images/covers/eyeful.png" style="max-width: 15vw; padding-bottom: 2%;">
-                    <h3>eyeful</h3>
-                    <h3>by me</h3>
-                    <a href="assets/audio/eyeful.mp3" download="eyeful by evelyy">download</a>
-                </div>
-                <div class="music-container flex row" id="breathy">
-                    <img src="assets/images/covers/cat_square.png" style="max-width: 15vw">
-                    <h3>breathy</h3>
-                    <h3>by me</h3>
-                    <a href="assets/audio/breathy.mp3" download="breathy by evelyy">download</a>
-                </div>
-            </div>
-            <div class="friends hidden middle div-style flex column centre space-between fill-screen-height">
-                <h2>my friends' pages</h2>
-                <div class="flex row space-between" id="friendWrapper">
-                    <a href="https://yachiqq.neocities.org">
-                        <img src="assets/images/friends/yachiqq.gif" style="padding-right: 2.5%">
-                    </a>
-                    <a href="https://wormcore.neocities.org">
-                        <img src="assets/images/friends/worm.png" style="padding-left: 2.5%">
-                    </a>
-                </div>
-                <div class="flexSpacingDummy"></div>
-                <div class="flexSpacingDummy"></div>
-            </div>
-            <div class="about hidden middle div-style flex column centre space-between fill-screen-height">
-                <h2>about me, evelyn</h2>
-                <p style="text-align: center;">hi, i'm evelyn, a 22 year old bassist and producer from melbourne australia
-                    <br>
-                    i usually make electronic music, but i also work in metal and pop-punk
-                    <br>
-                    i'm currently the bassist for the band elkie kershaw and the distant relatives
-                    <br>
-                    hope to see you around
-                </p>
-                <div class="flexSpacingDummy"></div>
-                <div class="flexSpacingDummy"></div>
-            </div>
-        </div>
-        <div class="box" id="right-side">
-            <div class="vines">
-                <img class="ivy-corner top right" id="ivy-right" src="assets/images/ivy-corner.png">
-                <div class="repeating-vines right"></div>
-                <img class="ivy-corner bottom right" id="ivy-right-bottom" src="assets/images/ivy-corner.png">
-            </div>
-            <div class="music-player hidden div-style">
-
-                <div class="details">
-                    <div class="now-playing">PLAYING x OF y</div>
-                    <div class="track-art"></div>
-                    <div class="track-name">Track Name</div>
-                    <div class="track-artist">Track Artist</div>
-                </div>
-
-                <div class="buttons">
-                    <div class="prev-track" onclick="prevTrack()">
-                        <i class="fa fa-step-backward fa-2x"></i>
+                        <div class="next-track" onclick="nextTrack()">
+                            <i class="fa fa-step-forward fa-2x"></i>
+                        </div>
                     </div>
-                    <div class="playpause-track" onclick="playpauseTrack()">
-                        <i class="fa fa-play-circle fa-5x"></i>
+                  
+                    <div class="slider_container">
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100"
+                            value="0" class="seek_slider" onchange="seekTo()">
+                        <div class="total-duration">00:00</div>
                     </div>
-                    <div class="next-track" onclick="nextTrack()">
-                        <i class="fa fa-step-forward fa-2x"></i>
+                  
+                    <div class="slider_container">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" min="1" max="100"
+                            value="99" class="volume_slider" onchange="setVolume()">
+                        <i class="fa fa-volume-up"></i>
+                    </div>
+    
+                    <div class="play-list">
+    
                     </div>
                 </div>
-              
-                <div class="slider_container">
-                    <div class="current-time">00:00</div>
-                    <input type="range" min="1" max="100"
-                        value="0" class="seek_slider" onchange="seekTo()">
-                    <div class="total-duration">00:00</div>
-                </div>
-              
-                <div class="slider_container">
-                    <i class="fa fa-volume-down"></i>
-                    <input type="range" min="1" max="100"
-                        value="99" class="volume_slider" onchange="setVolume()">
-                    <i class="fa fa-volume-up"></i>
-                </div>
-
-                <div class="play-list">
-
-                </div>
+            </div>
+            <div class="line-break"></div>
+            <div class="footer div-style hidden stretch" style="text-align: center; vertical-align: bottom;">
+                <span class="footer-text">
+                    <p>copyright evelyn heaton 2025</p>
+                </span>
             </div>
         </div>
     </div>
